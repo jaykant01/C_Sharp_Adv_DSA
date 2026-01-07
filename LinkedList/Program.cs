@@ -21,7 +21,7 @@ class Program
         //nh.Forward();
         //nh.Forward();
         //nh.Forward();
-        
+
         // Music Playlist Queue
         //MusicPlaylist ms = new MusicPlaylist();
         //ms.ListenLast("Change");
@@ -57,15 +57,32 @@ class Program
 
 
         // Customer Service Call Center Queue
-        CallCenterQueue queue = new();
-        queue.AddTicket(new CallTicket(1, "Jay"));
-        queue.AddTicket(new ChatTicket(2, "Will"));
-        queue.AddTicket(new EmailTicket(3, "Steve"));
+        //CallCenterQueue queue = new();
+        //queue.AddTicket(new CallTicket(1, "Jay"));
+        //queue.AddTicket(new ChatTicket(2, "Will"));
+        //queue.AddTicket(new EmailTicket(3, "Steve"));
 
-        queue.Peek();
-        queue.HandleTicket();
-        queue.HandleTicket();
-        queue.HandleTicket();
+        //queue.Peek();
+        //queue.HandleTicket();
+        //queue.HandleTicket();
+        //queue.HandleTicket();
+
+
+        // Train Route Management System
+        TrainRoute route = new ExpressRoute();
+
+        route.AddStation("Delhi");
+        route.AddStation("Agra");
+        route.AddStation("Bhopal");
+        route.AddStation("Nagpur");
+
+        route.DisplayRoute();
+
+        route.RemoveStation("Agra");
+        route.DisplayRoute();
+
+        route.ReverseRoute();
+        route.DisplayRoute();
 
         Console.ReadKey();
     }
