@@ -35,26 +35,38 @@ class Program
 
 
         // Undo Feature in Text editor
-        UndoFeature un = new UndoFeature();
-        un.LastIn("Hello ");
-        un.LastIn("I'm ");
-        un.LastIn("Jaykant");
-        un.Display();
+        //UndoFeature un = new UndoFeature();
+        //un.LastIn("Hello ");
+        //un.LastIn("I'm ");
+        //un.LastIn("Jaykant");
+        //un.Display();
 
-        un.Undo();
-        un.Display();
+        //un.Undo();
+        //un.Display();
 
-        un.Undo();
-        un.Display();
+        //un.Undo();
+        //un.Display();
 
-        un.Redo();
-        un.Display();
+        //un.Redo();
+        //un.Display();
 
-        un.Redo();
-        un.Display();
+        //un.Redo();
+        //un.Display();
 
-        un.Redo();
-        un.Display();
+        //un.Redo();
+
+
+        // Customer Service Call Center Queue
+        CallCenterQueue queue = new();
+        queue.AddTicket(new CallTicket(1, "Jay"));
+        queue.AddTicket(new ChatTicket(2, "Will"));
+        queue.AddTicket(new EmailTicket(3, "Steve"));
+
+        queue.Peek();
+        queue.HandleTicket();
+        queue.HandleTicket();
+        queue.HandleTicket();
+
         Console.ReadKey();
     }
 }
