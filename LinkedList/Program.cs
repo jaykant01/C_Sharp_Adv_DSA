@@ -155,24 +155,35 @@ class Program
 
 
         // 11 Order Processing System with Interface for Order types
-        OrderQueue orderQueue = new OrderQueue();
+        //OrderQueue orderQueue = new OrderQueue();
 
-        // Add orders
-        orderQueue.EnqueueOrder(new OnlineOrder(101));
-        orderQueue.EnqueueOrder(new OfflineOrder(102));
-        orderQueue.EnqueueOrder(new SubscriptionOrder(103));
+        //// Add orders
+        //orderQueue.EnqueueOrder(new OnlineOrder(101));
+        //orderQueue.EnqueueOrder(new OfflineOrder(102));
+        //orderQueue.EnqueueOrder(new SubscriptionOrder(103));
 
-        // Display all orders
-        orderQueue.DisplayOrders();
+        //// Display all orders
+        //orderQueue.DisplayOrders();
 
-        Console.WriteLine("\nProcessing orders:");
+        //Console.WriteLine("\nProcessing orders:");
 
-        // Process orders
-        orderQueue.ProcessNextOrder();
-        orderQueue.ProcessNextOrder();
+        //// Process orders
+        //orderQueue.ProcessNextOrder();
+        //orderQueue.ProcessNextOrder();
 
-        Console.WriteLine("\nPending orders:");
-        orderQueue.DisplayOrders();
+        //Console.WriteLine("\nPending orders:");
+        //orderQueue.DisplayOrders();
+
+        // 10 Custom Notification System with Interface and LinkedList
+        NotificationQueue queue = new NotificationQueue();
+
+        // Add notifications
+        queue.Add(new EmailNotification("user@example.com"));
+        queue.Add(new SmsNotification("+1234567890"));
+        queue.Add(new PushNotification("DEVICE_001"));
+
+        // Send all notifications
+        queue.SendAll();
 
         Console.ReadKey();
     }
