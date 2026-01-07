@@ -69,20 +69,29 @@ class Program
 
 
         // Train Route Management System
-        TrainRoute route = new ExpressRoute();
+        //TrainRoute route = new ExpressRoute();
 
-        route.AddStation("Delhi");
-        route.AddStation("Agra");
-        route.AddStation("Bhopal");
-        route.AddStation("Nagpur");
+        //route.AddStation("Delhi");
+        //route.AddStation("Agra");
+        //route.AddStation("Bhopal");
+        //route.AddStation("Nagpur");
 
-        route.DisplayRoute();
+        //route.DisplayRoute();
 
-        route.RemoveStation("Agra");
-        route.DisplayRoute();
+        //route.RemoveStation("Agra");
+        //route.DisplayRoute();
 
-        route.ReverseRoute();
-        route.DisplayRoute();
+        //route.ReverseRoute();
+        //route.DisplayRoute();
+
+        // Workflow Engine
+        WorkflowEngine workflow = new WorkflowEngine();
+
+        workflow.AddStep(new ValidateStep());
+        workflow.AddStep(new ReviewStep());
+        workflow.AddStep(new ApproveStep());
+
+        workflow.Run();
 
         Console.ReadKey();
     }
