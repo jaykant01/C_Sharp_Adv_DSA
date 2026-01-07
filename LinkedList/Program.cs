@@ -133,26 +133,46 @@ class Program
         //queue.DisplayQueue();
 
         // 12 Job Execution System with Executable Interface
-        JobQueue jobQueue = new JobQueue();
+        //JobQueue jobQueue = new JobQueue();
 
-        // Add jobs to queue
-        jobQueue.EnqueueJob(new DataSyncJob("Database"));
-        jobQueue.EnqueueJob(new EmailJob("admin@example.com"));
-        jobQueue.EnqueueJob(new CleanupJob("Temp Files"));
+        //// Add jobs to queue
+        //jobQueue.EnqueueJob(new DataSyncJob("Database"));
+        //jobQueue.EnqueueJob(new EmailJob("admin@example.com"));
+        //jobQueue.EnqueueJob(new CleanupJob("Temp Files"));
 
-        // Display all jobs
-        jobQueue.DisplayQueue();
+        //// Display all jobs
+        //jobQueue.DisplayQueue();
 
-        Console.WriteLine("\nExecuting jobs:");
+        //Console.WriteLine("\nExecuting jobs:");
 
-        // Execute first two jobs
-        jobQueue.ExecuteNext();
-        jobQueue.ExecuteNext();
+        //// Execute first two jobs
+        //jobQueue.ExecuteNext();
+        //jobQueue.ExecuteNext();
 
-        // Display remaining jobs
-        Console.WriteLine("\nPending jobs after execution:");
-        jobQueue.DisplayQueue();
+        //// Display remaining jobs
+        //Console.WriteLine("\nPending jobs after execution:");
+        //jobQueue.DisplayQueue();
 
+
+        // 11 Order Processing System with Interface for Order types
+        OrderQueue orderQueue = new OrderQueue();
+
+        // Add orders
+        orderQueue.EnqueueOrder(new OnlineOrder(101));
+        orderQueue.EnqueueOrder(new OfflineOrder(102));
+        orderQueue.EnqueueOrder(new SubscriptionOrder(103));
+
+        // Display all orders
+        orderQueue.DisplayOrders();
+
+        Console.WriteLine("\nProcessing orders:");
+
+        // Process orders
+        orderQueue.ProcessNextOrder();
+        orderQueue.ProcessNextOrder();
+
+        Console.WriteLine("\nPending orders:");
+        orderQueue.DisplayOrders();
 
         Console.ReadKey();
     }
