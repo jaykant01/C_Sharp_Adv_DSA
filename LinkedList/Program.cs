@@ -94,21 +94,44 @@ class Program
         //workflow.Run();
 
         // RetryQueue
-        RetryQueue retryQueue = new RetryQueue();
+        //RetryQueue retryQueue = new RetryQueue();
 
-        retryQueue.Enqueue(new SmsTask("+1234567890", "Hello SMS"));
-        retryQueue.Enqueue(new EmailTask("user@example.com", "Hello Email"));
-        retryQueue.Enqueue(new SmsTask("+9876543210", "Reminder SMS"));
+        //retryQueue.Enqueue(new SmsTask("+1234567890", "Hello SMS"));
+        //retryQueue.Enqueue(new EmailTask("user@example.com", "Hello Email"));
+        //retryQueue.Enqueue(new SmsTask("+9876543210", "Reminder SMS"));
 
-        retryQueue.DisplayQueue();
+        //retryQueue.DisplayQueue();
 
-        Console.WriteLine("\nRetrying tasks:");
+        //Console.WriteLine("\nRetrying tasks:");
 
-        retryQueue.RetryNext();
-        retryQueue.RetryNext();
+        //retryQueue.RetryNext();
+        //retryQueue.RetryNext();
 
-        Console.WriteLine("\nPending tasks after retries:");
-        retryQueue.DisplayQueue();
+        //Console.WriteLine("\nPending tasks after retries:");
+        //retryQueue.DisplayQueue();
+
+        //  Customer Support Chat Queue System 13
+        RequestQueue queue = new RequestQueue();
+
+        // Add customer requests
+        queue.EnqueueRequest(new ChatRequest("Alice"));
+        queue.EnqueueRequest(new CallRequest("Bob"));
+        queue.EnqueueRequest(new EmailRequest("Charlie"));
+        queue.EnqueueRequest(new ChatRequest("David"));
+
+        // Display all pending requests
+        queue.DisplayQueue();
+
+        Console.WriteLine("\nServing requests:");
+
+        // Serve first two requests
+        queue.ServeNextRequest();
+        queue.ServeNextRequest();
+
+        // Display remaining requests
+        Console.WriteLine("\nPending requests after serving:");
+        queue.DisplayQueue();
+
 
         Console.ReadKey();
     }
