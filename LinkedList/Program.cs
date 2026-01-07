@@ -187,21 +187,31 @@ class Program
 
 
         // 6 Task secludar with   prioritization
-        TaskScheduler scheduler = new TaskScheduler();
+        //TaskScheduler scheduler = new TaskScheduler();
 
-        scheduler.AddTask(new EmailTask1("admin@example.com", 2));
-        scheduler.AddTask(new ReportTask("Sales Report", 5));
-        scheduler.AddTask(new EmailTask1("user@example.com", 3));
-        scheduler.AddTask(new ReportTask("Audit Report", 1));
+        //scheduler.AddTask(new EmailTask1("admin@example.com", 2));
+        //scheduler.AddTask(new ReportTask("Sales Report", 5));
+        //scheduler.AddTask(new EmailTask1("user@example.com", 3));
+        //scheduler.AddTask(new ReportTask("Audit Report", 1));
 
-        scheduler.DisplayTasks();
+        //scheduler.DisplayTasks();
 
-        Console.WriteLine("\nExecuting tasks:");
-        scheduler.ExecuteNext();
-        scheduler.ExecuteNext();
+        //Console.WriteLine("\nExecuting tasks:");
+        //scheduler.ExecuteNext();
+        //scheduler.ExecuteNext();
 
-        Console.WriteLine("\nRemaining tasks:");
-        scheduler.DisplayTasks();
+        //Console.WriteLine("\nRemaining tasks:");
+        //scheduler.DisplayTasks();
+
+        // 7 NotificationFeed
+        NotificationFeed feed = new NotificationFeed();
+
+        feed.AddNotification(new LikeNotification("Jay liked your photo"));
+        feed.AddNotification(new CommentNotification("Alex commented: Nice post!"));
+        feed.AddNotification(new LikeNotification("Sam liked your status"));
+        feed.AddNotification(new CommentNotification("Emma commented: Awesome!"));
+
+        feed.DisplayFeed();
 
         Console.ReadKey();
     }
