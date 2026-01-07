@@ -111,26 +111,47 @@ class Program
         //retryQueue.DisplayQueue();
 
         //  Customer Support Chat Queue System 13
-        RequestQueue queue = new RequestQueue();
+        //RequestQueue queue = new RequestQueue();
 
-        // Add customer requests
-        queue.EnqueueRequest(new ChatRequest("Alice"));
-        queue.EnqueueRequest(new CallRequest("Bob"));
-        queue.EnqueueRequest(new EmailRequest("Charlie"));
-        queue.EnqueueRequest(new ChatRequest("David"));
+        //// Add customer requests
+        //queue.EnqueueRequest(new ChatRequest("Alice"));
+        //queue.EnqueueRequest(new CallRequest("Bob"));
+        //queue.EnqueueRequest(new EmailRequest("Charlie"));
+        //queue.EnqueueRequest(new ChatRequest("David"));
 
-        // Display all pending requests
-        queue.DisplayQueue();
+        //// Display all pending requests
+        //queue.DisplayQueue();
 
-        Console.WriteLine("\nServing requests:");
+        //Console.WriteLine("\nServing requests:");
 
-        // Serve first two requests
-        queue.ServeNextRequest();
-        queue.ServeNextRequest();
+        //// Serve first two requests
+        //queue.ServeNextRequest();
+        //queue.ServeNextRequest();
 
-        // Display remaining requests
-        Console.WriteLine("\nPending requests after serving:");
-        queue.DisplayQueue();
+        //// Display remaining requests
+        //Console.WriteLine("\nPending requests after serving:");
+        //queue.DisplayQueue();
+
+        // 12 Job Execution System with Executable Interface
+        JobQueue jobQueue = new JobQueue();
+
+        // Add jobs to queue
+        jobQueue.EnqueueJob(new DataSyncJob("Database"));
+        jobQueue.EnqueueJob(new EmailJob("admin@example.com"));
+        jobQueue.EnqueueJob(new CleanupJob("Temp Files"));
+
+        // Display all jobs
+        jobQueue.DisplayQueue();
+
+        Console.WriteLine("\nExecuting jobs:");
+
+        // Execute first two jobs
+        jobQueue.ExecuteNext();
+        jobQueue.ExecuteNext();
+
+        // Display remaining jobs
+        Console.WriteLine("\nPending jobs after execution:");
+        jobQueue.DisplayQueue();
 
 
         Console.ReadKey();
