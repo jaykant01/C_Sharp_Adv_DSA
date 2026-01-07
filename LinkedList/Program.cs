@@ -5,23 +5,33 @@ class Program
     static void Main(string[] args)
     {
         // Browser History Navigation
-        Navigation nh = new BrowserHistory();
-        nh.AddFirst("github.com");
-        nh.AddFirst("google.com");
-        nh.AddFirst("stackoverflow.com");
-        nh.AddFirst("epicgames.com");
+        //Navigation nh = new BrowserHistory();
+        //nh.AddFirst("github.com");
+        //nh.AddFirst("google.com");
+        //nh.AddFirst("stackoverflow.com");
+        //nh.AddFirst("epicgames.com");
 
-        BrowserHistory bh = new BrowserHistory();
-        bh.Display();
-        nh.Backward();
-        nh.Backward();
-        nh.Backward();
-        nh.Backward();
-        nh.Forward();
-        nh.Forward();
-        nh.Forward();
-        nh.Forward();
+        //BrowserHistory bh = new BrowserHistory();
+        //bh.Display();
+        //nh.Backward();
+        //nh.Backward();
+        //nh.Backward();
+        //nh.Backward();
+        //nh.Forward();
+        //nh.Forward();
+        //nh.Forward();
+        //nh.Forward();
         
+        // Music Playlist Queue
+        MusicPlaylist ms = new MusicPlaylist();
+        ms.ListenLast("Change");
+        ms.ListenLast("Go for it");
+        ms.ListenFirst("Brooklyn Baby");
+        ms.ListenFirst("End of Beginning");
+        ms.Display();
+        ms.PlayCurrent();
+        ms.PlayNext();
+        ms.PlayNext();
 
 
         Console.ReadKey();
