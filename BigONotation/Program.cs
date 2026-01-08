@@ -63,32 +63,50 @@ class Program
         //    Console.WriteLine($"Quick Sort: {sw.ElapsedMilliseconds} ms");
 
         // Problem 3
-        int[] sizes = { 1000, 10000, 1_000_000 };
+        //int[] sizes = { 1000, 10000, 1_000_000 };
 
-        foreach (int size in sizes)
-        {
-            Console.WriteLine($"\nOperations Count: {size}");
-            Stopwatch sw = new Stopwatch();
+        //foreach (int size in sizes)
+        //{
+        //    Console.WriteLine($"\nOperations Count: {size}");
+        //    Stopwatch sw = new Stopwatch();
 
-            // string concatenation (skip for very large input)
-            if (size <= 10000)
-            {
-                sw.Start();
-                StringConcatenationPerformance.UsingString(size);
-                sw.Stop();
-                Console.WriteLine($"string: {sw.ElapsedMilliseconds} ms");
-            }
-            else
-            {
-                Console.WriteLine("string: Skipped (Too Slow)");
-            }
+        //    // string concatenation (skip for very large input)
+        //    if (size <= 10000)
+        //    {
+        //        sw.Start();
+        //        StringConcatenationPerformance.UsingString(size);
+        //        sw.Stop();
+        //        Console.WriteLine($"string: {sw.ElapsedMilliseconds} ms");
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine("string: Skipped (Too Slow)");
+        //    }
 
-            // StringBuilder
-            sw.Restart();
-            StringConcatenationPerformance.UsingStringBuilder(size);
-            sw.Stop();
-            Console.WriteLine($"StringBuilder: {sw.ElapsedMilliseconds} ms");
-        }
+        //    // StringBuilder
+        //    sw.Restart();
+        //    StringConcatenationPerformance.UsingStringBuilder(size);
+        //    sw.Stop();
+        //    Console.WriteLine($"StringBuilder: {sw.ElapsedMilliseconds} ms");
+        //}
+
+
+        // Problem 4 
+        string filePath = @"D:\C# All Repo\C_Sharp_ADV_DSA\BigONotation\LargeFile.txt"; 
+
+        Stopwatch sw = new Stopwatch();
+
+        // StreamReader
+        sw.Start();
+        LargeFileReadingEfficiency.ReadUsingStreamReader(filePath);
+        sw.Stop();
+        Console.WriteLine($"StreamReader Time: {sw.Elapsed.TotalSeconds:F2} s");
+
+        // FileStream
+        sw.Restart();
+        LargeFileReadingEfficiency.ReadUsingFileStream(filePath);
+        sw.Stop();
+        Console.WriteLine($"FileStream Time: {sw.Elapsed.TotalSeconds:F2} s");
 
         Console.ReadKey();
     }
