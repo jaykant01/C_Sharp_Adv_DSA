@@ -92,21 +92,52 @@ class Program
 
 
         // Problem 4 
-        string filePath = @"D:\C# All Repo\C_Sharp_ADV_DSA\BigONotation\LargeFile.txt"; 
+        //string filePath = @"D:\C# All Repo\C_Sharp_ADV_DSA\BigONotation\LargeFile.txt"; 
 
-        Stopwatch sw = new Stopwatch();
+        //Stopwatch sw = new Stopwatch();
 
-        // StreamReader
-        sw.Start();
-        LargeFileReadingEfficiency.ReadUsingStreamReader(filePath);
-        sw.Stop();
-        Console.WriteLine($"StreamReader Time: {sw.Elapsed.TotalSeconds:F2} s");
+        //// StreamReader
+        //sw.Start();
+        //LargeFileReadingEfficiency.ReadUsingStreamReader(filePath);
+        //sw.Stop();
+        //Console.WriteLine($"StreamReader Time: {sw.Elapsed.TotalSeconds:F2} s");
 
-        // FileStream
-        sw.Restart();
-        LargeFileReadingEfficiency.ReadUsingFileStream(filePath);
-        sw.Stop();
-        Console.WriteLine($"FileStream Time: {sw.Elapsed.TotalSeconds:F2} s");
+        //// FileStream
+        //sw.Restart();
+        //LargeFileReadingEfficiency.ReadUsingFileStream(filePath);
+        //sw.Stop();
+        //Console.WriteLine($"FileStream Time: {sw.Elapsed.TotalSeconds:F2} s");
+
+        // Problem 5 Recursive vs Iterative Fibonacci Computation
+
+        int[] testValues = { 10, 30, 50 };
+
+        foreach (int n in testValues)
+        {
+            Console.WriteLine($"\nFibonacci N = {n}");
+            Stopwatch sw = new Stopwatch();
+
+            // Recursive Fibonacci (skip large N)
+            if (n <= 30)
+            {
+                sw.Start();
+                int recResult = FibonacciPerformance.FibonacciRecursive(n);
+                sw.Stop();
+                Console.WriteLine($"Recursive Result: {recResult}");
+                Console.WriteLine($"Recursive Time: {sw.ElapsedMilliseconds} ms");
+            }
+            else
+            {
+                Console.WriteLine("Recursive: Skipped (Too Slow)");
+            }
+
+            // Iterative Fibonacci 
+            sw.Restart();
+            int itrResult = FibonacciPerformance.FibonacciIterative(n);
+            sw.Stop();
+            Console.WriteLine($"Iterative Result: {itrResult}");
+            Console.WriteLine($"Iterative Time: {sw.ElapsedMilliseconds} ms");
+        }
 
         Console.ReadKey();
     }

@@ -12,7 +12,7 @@ public class LargeFileReadingEfficiency
         {
             while (reader.ReadLine() != null)
             {
-                Console.WriteLine("a");
+                // Reading line by line
             }
         }
     }
