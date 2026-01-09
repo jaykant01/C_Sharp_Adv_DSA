@@ -20,9 +20,13 @@ class Program
         //ReadFile read = new ReadFile();
         //read.FileReader(@"D:\C# All Repo\C_Sharp_ADV_DSA\FileHandling\TextFile.txt");
 
-        CountWord c = new CountWord();
-        int result = c.FileReader(@"D:\C# All Repo\C_Sharp_ADV_DSA\FileHandling\TextFile.txt", "Steve");
-        Console.WriteLine("Word count: " + result);
+        //CountWord c = new CountWord();
+        //int result = c.FileReader(@"D:\C# All Repo\C_Sharp_ADV_DSA\FileHandling\TextFile.txt", "Steve");
+        //Console.WriteLine("Word count: " + result);
+
+        ConvertByte cv = new ConvertByte();
+        cv.CreateBinaryFile("byte.txt");
+        cv.ReadAsCharacters("byte.txt");
 
         Console.ReadKey();
 
