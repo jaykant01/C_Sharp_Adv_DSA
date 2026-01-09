@@ -24,9 +24,19 @@ class Program
         //int result = c.FileReader(@"D:\C# All Repo\C_Sharp_ADV_DSA\FileHandling\TextFile.txt", "Steve");
         //Console.WriteLine("Word count: " + result);
 
-        ConvertByte cv = new ConvertByte();
-        cv.CreateBinaryFile("byte.txt");
-        cv.ReadAsCharacters("byte.txt");
+        //ConvertByte cv = new ConvertByte();
+        //cv.CreateBinaryFile("byte.txt");
+        //cv.ReadAsCharacters("byte.txt");
+
+
+        string path = (@"D:\C# All Repo\C_Sharp_ADV_DSA\FileHandling\TextFile.txt");
+        UserInputWriter inputWriter = new UserInputWriter(path);
+
+        // Read user input and write to file
+        inputWriter.WriteInputToFile();
+
+        // Read the file and print contents
+        inputWriter.ReadFile();
 
         Console.ReadKey();
 
