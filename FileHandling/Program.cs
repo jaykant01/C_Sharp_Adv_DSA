@@ -13,8 +13,12 @@ class Program
         //RemoveDuplicates rd = new RemoveDuplicates();
         //rd.Duplicate();
 
-        StringConcatenation sc = new StringConcatenation();
-        sc.Concatenation();
+        //StringConcatenation sc = new StringConcatenation();
+        //sc.Concatenation();
+
+        // File Handling
+        ReadFile read = new ReadFile();
+        read.FileReader(@"D:\C# All Repo\C_Sharp_ADV_DSA\FileHandling\TextFile.txt");
 
 
 
