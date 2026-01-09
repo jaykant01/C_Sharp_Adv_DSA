@@ -7,8 +7,11 @@ class Program
     static void Main(string[] args)
     {
         // String builder Problem 1
-        ReverseUsingBuilder r = new ReverseUsingBuilder();
-        r.ReverseString();
+        //ReverseUsingBuilder r = new ReverseUsingBuilder();
+        //r.ReverseString();
+
+        RemoveDuplicates rd = new RemoveDuplicates();
+        rd.Duplicate();
 
         Console.ReadKey();
 
