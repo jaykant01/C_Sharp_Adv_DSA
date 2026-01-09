@@ -36,9 +36,16 @@ class Program
 
 
         // Binary search Problems
-        RotatedArray ra = new RotatedArray(); 
-        ra.PrintResult();
+        //RotatedArray ra = new RotatedArray(); 
+        //ra.PrintResult();
 
+
+        //PeakElementFinder finder = new PeakElementFinder();
+        //finder.PrintPeak();
+
+
+        MatrixBinarySearch search = new MatrixBinarySearch();
+        search.PrintResult();
 
         Console.ReadKey();
     }
