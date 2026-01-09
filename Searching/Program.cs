@@ -11,9 +11,23 @@ class Program
 
 
         // Binary Search
-        Console.WriteLine("Binary Search");
-        BinarySearch bs = new BinarySearch();
-        Console.WriteLine("Target is at Index: " + bs.BinaryS());
+        //Console.WriteLine("Binary Search");
+        //BinarySearch bs = new BinarySearch();
+        //Console.WriteLine("Target is at Index: " + bs.BinaryS());
+
+        // Negative number
+        NegativeNumber nv = new NegativeNumber();
+
+        int firstNegative = nv.FindFirstNegative();
+
+        if (firstNegative != int.MinValue)
+        {
+            Console.WriteLine("First negative number is: " + firstNegative);
+        }
+        else
+        {
+            Console.WriteLine("No negative numbers found in the array.");
+        }
 
         Console.ReadKey();
     }
