@@ -16,18 +16,23 @@ class Program
         //Console.WriteLine("Target is at Index: " + bs.BinaryS());
 
         // Negative number
-        NegativeNumber nv = new NegativeNumber();
+        //NegativeNumber nv = new NegativeNumber();
 
-        int firstNegative = nv.FindFirstNegative();
+        //int firstNegative = nv.FindFirstNegative();
 
-        if (firstNegative != int.MinValue)
-        {
-            Console.WriteLine("First negative number is: " + firstNegative);
-        }
-        else
-        {
-            Console.WriteLine("No negative numbers found in the array.");
-        }
+        //if (firstNegative != int.MinValue)
+        //{
+        //    Console.WriteLine("First negative number is: " + firstNegative);
+        //}
+        //else
+        //{
+        //    Console.WriteLine("No negative numbers found in the array.");
+        //}
+
+        // Sentence Searching
+        SentenceSearch ss = new SentenceSearch();
+        string result = ss.FindSentenceWithWord(); 
+        Console.WriteLine(result);
 
         Console.ReadKey();
     }
