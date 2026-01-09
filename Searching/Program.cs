@@ -30,9 +30,15 @@ class Program
         //}
 
         // Sentence Searching
-        SentenceSearch ss = new SentenceSearch();
-        string result = ss.FindSentenceWithWord(); 
-        Console.WriteLine(result);
+        //SentenceSearch ss = new SentenceSearch();
+        //string result = ss.FindSentenceWithWord(); 
+        //Console.WriteLine(result);
+
+
+        // Binary search Problems
+        RotatedArray ra = new RotatedArray(); 
+        ra.PrintResult();
+
 
         Console.ReadKey();
     }
