@@ -44,8 +44,11 @@ class Program
         //finder.PrintPeak();
 
 
-        MatrixBinarySearch search = new MatrixBinarySearch();
-        search.PrintResult();
+        //MatrixBinarySearch search = new MatrixBinarySearch();
+        //search.PrintResult();
+
+        FirstLastOccurrenceFinder finder = new FirstLastOccurrenceFinder();
+        finder.PrintResult();
 
         Console.ReadKey();
     }
