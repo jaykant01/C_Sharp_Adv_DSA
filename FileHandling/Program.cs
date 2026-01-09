@@ -10,8 +10,11 @@ class Program
         //ReverseUsingBuilder r = new ReverseUsingBuilder();
         //r.ReverseString();
 
-        RemoveDuplicates rd = new RemoveDuplicates();
-        rd.Duplicate();
+        //RemoveDuplicates rd = new RemoveDuplicates();
+        //rd.Duplicate();
+
+        StringConcatenation sc = new StringConcatenation();
+        sc.Concatenation();
 
         Console.ReadKey();
 
