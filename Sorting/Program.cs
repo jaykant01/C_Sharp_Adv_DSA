@@ -17,7 +17,10 @@ class Program
         //MergeSortBookPrices.MergeSort();
 
         // Quick Sort
-        QuickSortProductPrices.QuickSort();
+        //QuickSortProductPrices.QuickSort();
+
+        // Heap Sort
+        HeapSortJobApplicantSalaries.HeapSort();
 
 
         Console.ReadKey();
