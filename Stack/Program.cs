@@ -33,16 +33,27 @@ class Program
 
 
         // Problem 3
-        ISyntaxChecker checker;
+        //ISyntaxChecker checker;
 
-        checker = new CStyleSyntaxChecker(); 
+        //checker = new CStyleSyntaxChecker(); 
 
-        string code = "{ int x = (10 + 20); }";
+        //string code = "{ int x = (10 + 20); }";
 
-        bool isValid = checker.IsSyntaxValid(code);
+        //bool isValid = checker.IsSyntaxValid(code);
 
-        Console.WriteLine("Code: " + code);
-        Console.WriteLine("Syntax Valid: " + isValid);
+        //Console.WriteLine("Code: " + code);
+        //Console.WriteLine("Syntax Valid: " + isValid);
+
+
+        // Problem 4
+        DrawingApp app = new DrawingApp();
+
+        app.PerformAction(new DrawLineAction());
+        app.PerformAction(new DrawCircleAction());
+        app.PerformAction(new EraseAction());
+
+        app.Undo();
+        app.Undo();
 
         Console.ReadKey();
     }
