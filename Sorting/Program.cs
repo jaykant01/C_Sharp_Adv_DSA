@@ -14,7 +14,10 @@ class Program
         //InsertionSort.Insertion();
 
         // Merge Sort
-        MergeSortBookPrices.MergeSort();
+        //MergeSortBookPrices.MergeSort();
+
+        // Quick Sort
+        QuickSortProductPrices.QuickSort();
 
 
         Console.ReadKey();
