@@ -8,7 +8,10 @@ class Program
         //BubbleSort.Bubble();
 
         // Selection Sort
-        SelectionSort.Selection();
+        //SelectionSort.Selection();
+
+        // Insertion Sort
+        InsertionSort.Insertion();
 
         Console.ReadKey();
     }
