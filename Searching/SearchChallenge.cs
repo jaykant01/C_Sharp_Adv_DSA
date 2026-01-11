@@ -7,7 +7,7 @@ public class SearchChallenge
         int n = nums.Length;
         bool[] present = new bool[n + 1];
 
-        // Mark existing positive numbers
+       
         for (int i = 0; i < n; i++)
         {
             if (nums[i] > 0 && nums[i] <= n)
@@ -16,7 +16,7 @@ public class SearchChallenge
             }
         }
 
-        // Find the first missing positive
+       
         for (int i = 1; i <= n; i++)
         {
             if (!present[i])

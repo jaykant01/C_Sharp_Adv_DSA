@@ -53,14 +53,14 @@ class Program
         int[] numbers = { 3, 4, -1, 1 };
         int target = 4;
 
-        // Linear Search
+        
         int missing = SearchChallenge.FindFirstMissingPositive(numbers);
         Console.WriteLine("First Missing Positive Integer: " + missing);
 
-        // Sort before Binary Search
+        
         Array.Sort(numbers);
 
-        // Binary Search
+
         int index = SearchChallenge.BinarySearch(numbers, target);
         Console.WriteLine("Index of Target " + target + ": " + index);
 
