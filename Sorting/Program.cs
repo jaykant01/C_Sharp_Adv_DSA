@@ -20,7 +20,10 @@ class Program
         //QuickSortProductPrices.QuickSort();
 
         // Heap Sort
-        HeapSortJobApplicantSalaries.HeapSort();
+        //HeapSortJobApplicantSalaries.HeapSort();
+
+        // Counting Sort
+        CountingSortStudentAges.CountingSort();
 
 
         Console.ReadKey();
