@@ -18,18 +18,31 @@ class Program
 
 
         //  Problem 2
-        INavigationManager browser;
+        //INavigationManager browser;
 
-        browser = new DesktopBrowser();
+        //browser = new DesktopBrowser();
 
-        browser.Visit("google.com");
-        browser.Visit("github.com");
-        browser.Visit("stackoverflow.com");
-        browser.Back();
-        browser.Back();
-        browser.Forward();
+        //browser.Visit("google.com");
+        //browser.Visit("github.com");
+        //browser.Visit("stackoverflow.com");
+        //browser.Back();
+        //browser.Back();
+        //browser.Forward();
 
-        browser.DisplayCurrent();
+        //browser.DisplayCurrent();
+
+
+        // Problem 3
+        ISyntaxChecker checker;
+
+        checker = new CStyleSyntaxChecker(); 
+
+        string code = "{ int x = (10 + 20); }";
+
+        bool isValid = checker.IsSyntaxValid(code);
+
+        Console.WriteLine("Code: " + code);
+        Console.WriteLine("Syntax Valid: " + isValid);
 
         Console.ReadKey();
     }
