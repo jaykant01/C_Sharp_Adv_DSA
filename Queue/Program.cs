@@ -28,15 +28,27 @@ class Program
 
 
         //Problem 3
-        TaskQueue dispatcher = new TaskQueue();
+        //TaskQueue dispatcher = new TaskQueue();
 
-        dispatcher.AddTask(new FileUploadTask());
-        dispatcher.AddTask(new AnalyticsTask());
-        dispatcher.AddTask(new LogTask());
+        //dispatcher.AddTask(new FileUploadTask());
+        //dispatcher.AddTask(new AnalyticsTask());
+        //dispatcher.AddTask(new LogTask());
 
-        dispatcher.ProcessNextTask();
-        dispatcher.ProcessNextTask();
-        dispatcher.ProcessNextTask();
+        //dispatcher.ProcessNextTask();
+        //dispatcher.ProcessNextTask();
+        //dispatcher.ProcessNextTask();
+
+
+        // Problem 4
+        CallCenterManager manager = new CallCenterManager();
+
+        manager.AddCall(new SupportCall());
+        manager.AddCall(new SalesCall());
+        manager.AddCall(new SupportCall());
+
+        manager.ProcessNextCall();
+        manager.ProcessNextCall();
+        manager.ProcessNextCall();
 
 
         Console.ReadKey();
