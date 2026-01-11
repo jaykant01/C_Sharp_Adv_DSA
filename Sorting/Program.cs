@@ -11,7 +11,11 @@ class Program
         //SelectionSort.Selection();
 
         // Insertion Sort
-        InsertionSort.Insertion();
+        //InsertionSort.Insertion();
+
+        // Merge Sort
+        MergeSortBookPrices.MergeSort();
+
 
         Console.ReadKey();
     }
