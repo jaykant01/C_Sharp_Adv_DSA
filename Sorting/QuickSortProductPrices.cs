@@ -21,7 +21,7 @@ public class QuickSortProductPrices
         }
     }
 
-    // Recursive Quick Sort method
+    
     private static void Sort(int[] arr, int low, int high)
     {
         if (low < high)
@@ -33,7 +33,7 @@ public class QuickSortProductPrices
         }
     }
 
-    // Partition method (pivot = last element)
+    
     private static int Partition(int[] arr, int low, int high)
     {
         int pivot = arr[high];
