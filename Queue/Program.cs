@@ -16,15 +16,27 @@ class Program
         //printer.ProcessNextJob();
 
         // Problem 2
-        TicketBookingService service = new TicketBookingService();
+        //TicketBookingService service = new TicketBookingService();
 
-        service.AddRequest(new BusTicketRequest());
-        service.AddRequest(new TrainTicketRequest());
-        service.AddRequest(new FlightTicketRequest());
+        //service.AddRequest(new BusTicketRequest());
+        //service.AddRequest(new TrainTicketRequest());
+        //service.AddRequest(new FlightTicketRequest());
 
-        service.ProcessNextRequest();
-        service.ProcessNextRequest();
-        service.ProcessNextRequest();
+        //service.ProcessNextRequest();
+        //service.ProcessNextRequest();
+        //service.ProcessNextRequest();
+
+
+        //Problem 3
+        TaskQueue dispatcher = new TaskQueue();
+
+        dispatcher.AddTask(new FileUploadTask());
+        dispatcher.AddTask(new AnalyticsTask());
+        dispatcher.AddTask(new LogTask());
+
+        dispatcher.ProcessNextTask();
+        dispatcher.ProcessNextTask();
+        dispatcher.ProcessNextTask();
 
 
         Console.ReadKey();
