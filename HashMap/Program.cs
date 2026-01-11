@@ -20,15 +20,25 @@ class Program
 
 
         // Problem 2
-        AuthSystem auth = new AuthSystem();
+        //AuthSystem auth = new AuthSystem();
 
-        auth.AssignRole("Alice", new AdminRole());
-        auth.AssignRole("Bob", new UserRole());
-        auth.AssignRole("Charlie", new ManagerRole());
+        //auth.AssignRole("Alice", new AdminRole());
+        //auth.AssignRole("Bob", new UserRole());
+        //auth.AssignRole("Charlie", new ManagerRole());
 
-        Console.WriteLine("Alice can delete? " + auth.CheckAccess("Alice", "delete"));
-        Console.WriteLine("Bob can write? " + auth.CheckAccess("Bob", "write"));
-        Console.WriteLine("Charlie can write? " + auth.CheckAccess("Charlie", "write"));
+        //Console.WriteLine("Alice can delete? " + auth.CheckAccess("Alice", "delete"));
+        //Console.WriteLine("Bob can write? " + auth.CheckAccess("Bob", "write"));
+        //Console.WriteLine("Charlie can write? " + auth.CheckAccess("Charlie", "write"));
+
+
+        // Problem 3
+        GradeService gradeService = new GradeService();
+
+        gradeService.AddGrade(101, new CBSEGradeReport());
+        gradeService.AddGrade(102, new GPAGradeReport());
+
+        gradeService.DisplayGrade(101, 88); 
+        gradeService.DisplayGrade(102, 88);
 
         Console.ReadKey();
     }
