@@ -20,19 +20,27 @@ class Program
 
 
         // Problem 1 - Part 2
-        EmptyDel.MessagePrinter printer;
+        //EmptyDel.MessagePrinter printer;
 
-        printer = EmptyDel.WelcomeMessage;
-        printer();
+        //printer = EmptyDel.WelcomeMessage;
+        //printer();
 
-        printer = EmptyDel.ErrorMessage;
-        printer();
+        //printer = EmptyDel.ErrorMessage;
+        //printer();
 
-        printer = EmptyDel.SuccessMessage;
-        printer();
-        
-        
-        
+        //printer = EmptyDel.SuccessMessage;
+        //printer();
+
+
+        // Problem 1 - Part 2 Delegate as Method Parameter
+        int result1 = PerformOperation.PerformOp(10, 5, PerformOperation.Add);
+        int result2 = PerformOperation.PerformOp(10, 5, PerformOperation.Subtract);
+        int result3 = PerformOperation.PerformOp(10, 5, PerformOperation.Multiply);
+
+        Console.WriteLine("Sum " + result1); 
+        Console.WriteLine("Subtract " + result2); 
+        Console.WriteLine("Multiply " + result3); 
+
         Console.ReadKey();
 
     }
