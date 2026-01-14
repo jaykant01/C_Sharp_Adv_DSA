@@ -33,13 +33,20 @@ class Program
 
 
         // Problem 1 - Part 2 Delegate as Method Parameter
-        int result1 = PerformOperation.PerformOp(10, 5, PerformOperation.Add);
-        int result2 = PerformOperation.PerformOp(10, 5, PerformOperation.Subtract);
-        int result3 = PerformOperation.PerformOp(10, 5, PerformOperation.Multiply);
+        //int result1 = PerformOperation.PerformOp(10, 5, PerformOperation.Add);
+        //int result2 = PerformOperation.PerformOp(10, 5, PerformOperation.Subtract);
+        //int result3 = PerformOperation.PerformOp(10, 5, PerformOperation.Multiply);
 
-        Console.WriteLine("Sum " + result1); 
-        Console.WriteLine("Subtract " + result2); 
-        Console.WriteLine("Multiply " + result3); 
+        //Console.WriteLine("Sum " + result1); 
+        //Console.WriteLine("Subtract " + result2); 
+        //Console.WriteLine("Multiply " + result3); 
+
+
+        // Problem 2 - Part 3 Multi Cast Delegate
+        MultiOperation.MyDelegate del = MultiOperation.MethodOne;
+        del += MultiOperation.MethodTwo;
+        del += MultiOperation.MethodThree;
+        del();
 
         Console.ReadKey();
 
