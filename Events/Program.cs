@@ -16,14 +16,31 @@ class Program
 
 
         // Problem 2
-        Notifier notifier = new Notifier();
-        MessageReceiver receiver = new MessageReceiver();
+        //Notifier notifier = new Notifier();
+        //MessageReceiver receiver = new MessageReceiver();
+
+        //// Subscribe to event
+        //notifier.MessageSent += receiver.OnMessageReceived;
+
+        //// Trigger event
+        //notifier.SendMessage("Hello, this is a custom event message!");
+
+
+        // Problem 3
+        Alarm alarm = new Alarm();
+        AlarmHandler handler = new AlarmHandler();
 
         // Subscribe to event
-        notifier.MessageSent += receiver.OnMessageReceived;
+        alarm.Triggered += handler.OnAlarmTriggered;
+        Console.WriteLine("Subscribed to event");
 
-        // Trigger event
-        notifier.SendMessage("Hello, this is a custom event message!");
+        alarm.Start();
+
+        // Unsubscribe from event
+        alarm.Triggered -= handler.OnAlarmTriggered;
+        Console.WriteLine("Unsubscribed from event");
+
+        alarm.Start();
 
         Console.ReadKey();
     }
