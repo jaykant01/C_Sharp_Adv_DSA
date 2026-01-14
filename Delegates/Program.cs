@@ -49,15 +49,24 @@ class Program
         //del();
 
         // Problem 1 - PArt 4 Anonymous Delegate
-        AnonymousOperation.SquareDelegate square = delegate (int x)
-        {
-            return x * x;
-        };
+        // AnonymousOperation.SquareDelegate square = delegate (int x)
+        // {
+        //     return x * x;
+        // };
 
-        int result = square(5);
-        Console.WriteLine("Square is: " + result);
+        // int result = square(5);
+        // Console.WriteLine("Square is: " + result);
 
-        Console.ReadKey();
+        // Console.ReadKey();
 
+
+        // Problem 2 - Built-in Delegates - Func and Action
+        // Func delegate (returns int)
+            Func<int, int, int> addDelegate = BuiltInDelgatee.Add;
+            Console.WriteLine(addDelegate(10, 20));
+
+            // Action delegate (returns void)
+            Action<string> printDelegate = BuiltInDelgatee.Print;
+            printDelegate("Hello from Main Method");
     }
 }
