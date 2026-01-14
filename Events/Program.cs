@@ -55,17 +55,30 @@ class Program
 
 
         // Problem 5
-        NewsAgency agency = new NewsAgency();
+        //NewsAgency agency = new NewsAgency();
 
-        EmailSubscriber email = new EmailSubscriber();
-        SmsSubscriber sms = new SmsSubscriber();
+        //EmailSubscriber email = new EmailSubscriber();
+        //SmsSubscriber sms = new SmsSubscriber();
 
-        // Multiple subscriptions
-        agency.NewsPublished += email.ReceiveNews;
-        agency.NewsPublished += sms.ReceiveNews;
+        //// Multiple subscriptions
+        //agency.NewsPublished += email.ReceiveNews;
+        //agency.NewsPublished += sms.ReceiveNews;
 
-        // Raise event
-        agency.PublishNews("Breaking News: C# Events are powerful!");
+        //// Raise event
+        //agency.PublishNews("Breaking News: C# Events are powerful!");
+
+
+        // Problem 6
+        Publisher p = new Publisher();
+        Subscriber s = new Subscriber();
+
+        //Only subscription allowed
+        p.NotifyUser += s.OnNotify;
+
+        p.Send("Hello Event World!");
+
+        //Unsubscription allowed
+        p.NotifyUser -= s.OnNotify;
 
         Console.ReadKey();
     }
