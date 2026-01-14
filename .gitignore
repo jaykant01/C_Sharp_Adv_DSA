@@ -15,3 +15,6 @@ obj/
 # OS files
 Thumbs.db
 .DS_Store
+
+# sln Files
+C_Sharp_Adv_DSA.sln
