@@ -44,14 +44,28 @@ class Program
 
 
         // Problem 4
-        Student student = new Student();
-        StudentObserver observer = new StudentObserver();
+        //Student student = new Student();
+        //StudentObserver observer = new StudentObserver();
 
-        // Subscribe to event
-        student.MarksChanged += observer.OnMarksChanged;
+        //// Subscribe to event
+        //student.MarksChanged += observer.OnMarksChanged;
 
-        student.Marks = 70;
-        student.Marks = 85;
+        //student.Marks = 70;
+        //student.Marks = 85;
+
+
+        // Problem 5
+        NewsAgency agency = new NewsAgency();
+
+        EmailSubscriber email = new EmailSubscriber();
+        SmsSubscriber sms = new SmsSubscriber();
+
+        // Multiple subscriptions
+        agency.NewsPublished += email.ReceiveNews;
+        agency.NewsPublished += sms.ReceiveNews;
+
+        // Raise event
+        agency.PublishNews("Breaking News: C# Events are powerful!");
 
         Console.ReadKey();
     }
