@@ -42,11 +42,20 @@ class Program
         //Console.WriteLine("Multiply " + result3); 
 
 
-        // Problem 2 - Part 3 Multi Cast Delegate
-        MultiOperation.MyDelegate del = MultiOperation.MethodOne;
-        del += MultiOperation.MethodTwo;
-        del += MultiOperation.MethodThree;
-        del();
+        // Problem 1 - Part 3 Multi Cast Delegate
+        //MultiOperation.MyDelegate del = MultiOperation.MethodOne;
+        //del += MultiOperation.MethodTwo;
+        //del += MultiOperation.MethodThree;
+        //del();
+
+        // Problem 1 - PArt 4 Anonymous Delegate
+        AnonymousOperation.SquareDelegate square = delegate (int x)
+        {
+            return x * x;
+        };
+
+        int result = square(5);
+        Console.WriteLine("Square is: " + result);
 
         Console.ReadKey();
 
