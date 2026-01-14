@@ -57,16 +57,46 @@ class Program
         // int result = square(5);
         // Console.WriteLine("Square is: " + result);
 
-        // Console.ReadKey();
-
 
         // Problem 2 - Built-in Delegates - Func and Action
         // Func delegate (returns int)
-            Func<int, int, int> addDelegate = BuiltInDelgatee.Add;
-            Console.WriteLine(addDelegate(10, 20));
+        //Func<int, int, int> addDelegate = BuiltInDelgatee.Add;
+        //Console.WriteLine(addDelegate(10, 20));
 
-            // Action delegate (returns void)
-            Action<string> printDelegate = BuiltInDelgatee.Print;
-            printDelegate("Hello from Main Method");
+        //// Action delegate (returns void)
+        //Action<string> printDelegate = BuiltInDelgatee.Print;
+        //printDelegate("Hello from Main Method");
+
+        // Problem 2 - Sorting
+        List<Student> students = new List<Student>
+        {
+            new Student("Rahul", 85, 21),
+            new Student("Amit", 92, 20),
+            new Student("Sneha", 78, 22)
+        };
+
+        Console.WriteLine("Sort by Name:");
+        StudentSorter.SortStudents(students, StudentSorter.SortByName);
+        Display(students);
+
+        Console.WriteLine("\nSort by Marks:");
+        StudentSorter.SortStudents(students, StudentSorter.SortByMarks);
+        Display(students);
+
+        Console.WriteLine("\nSort by Age:");
+        StudentSorter.SortStudents(students, StudentSorter.SortByAge);
+        Display(students);
+
+        static void Display(List<Student> students)
+        {
+            foreach (var s in students)
+            {
+                Console.WriteLine($"{s.Name} | Marks: {s.Marks} | Age: {s.Age}");
+            }
+        }
+
+        Console.ReadKey();
     }
+    
 }
+
