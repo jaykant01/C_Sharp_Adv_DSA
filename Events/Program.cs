@@ -27,20 +27,31 @@ class Program
 
 
         // Problem 3
-        Alarm alarm = new Alarm();
-        AlarmHandler handler = new AlarmHandler();
+        //Alarm alarm = new Alarm();
+        //AlarmHandler handler = new AlarmHandler();
+
+        //// Subscribe to event
+        //alarm.Triggered += handler.OnAlarmTriggered;
+        //Console.WriteLine("Subscribed to event");
+
+        //alarm.Start();
+
+        //// Unsubscribe from event
+        //alarm.Triggered -= handler.OnAlarmTriggered;
+        //Console.WriteLine("Unsubscribed from event");
+
+        //alarm.Start();
+
+
+        // Problem 4
+        Student student = new Student();
+        StudentObserver observer = new StudentObserver();
 
         // Subscribe to event
-        alarm.Triggered += handler.OnAlarmTriggered;
-        Console.WriteLine("Subscribed to event");
+        student.MarksChanged += observer.OnMarksChanged;
 
-        alarm.Start();
-
-        // Unsubscribe from event
-        alarm.Triggered -= handler.OnAlarmTriggered;
-        Console.WriteLine("Unsubscribed from event");
-
-        alarm.Start();
+        student.Marks = 70;
+        student.Marks = 85;
 
         Console.ReadKey();
     }
